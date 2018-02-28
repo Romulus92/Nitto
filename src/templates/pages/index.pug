@@ -1,1 +1,214 @@
-h1 Test
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel='stylesheet' href='/assets/styles/main.min.css')
+    title Nitto
+  body
+    .wrapper
+      .header
+        .logo
+        .header-menu
+          ul.header-menu__list
+            li.header-menu__item
+              a.header-menu__link Зимние шины
+            li.header-menu__item
+              a.header-menu__link Летние шины
+            li.header-menu__item
+              a.header-menu__link Найти магазин
+            li.header-menu__item
+              a.header-menu__link О компании
+          .nav-elemets
+            .nav-elemets__pin
+            .nav-elemets__search
+      .banner
+        .breadcrumbs
+          a.breadcrumbs__link Главная
+          a.breadcrumbs__link Каталог
+          a.breadcrumbs__link Внедорожные летние
+          a.breadcrumbs__link NT420S 275/60 R17 110V
+        .banner-info
+          .banner-info__logo
+          ul.banner-info__stars
+            li.banner-info__star
+          .banner-info__score 4,4 из  5
+          a.banner-info__feedback 23 отзыва
+          h1.banner-info__heading Высокопроизводительные шины для автомобилей класса SUV
+          p.banner-info__text Эта модель отличается стильным и функциональным асимметричным рисунком протектора, который обеспечивает тихую и комфортную езду. Кроме того, NT420S допускают перекрестную ротацию, которая способствует более равномерному износу и помогает продлить срок службы
+          .banner-info__button
+            span.banner-info__button-text Выбрать магазин
+        .banner-pic
+          img.banner-pic__image
+          .banner-pic__turn-icon
+      .main-content
+        .container
+          .product-header
+            h2.product-header__heading
+            .product-header-filter
+              img.product-header-filter__img
+              span.product-header-filter__text
+          .product-picture
+            img.product-picture__img
+          .product-info
+            .product-info-car
+              .product-info-car__icons
+                .product-info-car__icon
+                .product-info-car__icon
+              ul.product-info-car__params-list
+                li.product-info-car__params-item Тип авто:
+                li.product-info-car__params-item Сезонность:
+                li.product-info-car__params-item Размер:
+                li.product-info-car__params-item Особенность:
+                li.product-info-car__params-item Рисунок протектора:
+              ul.product-info-car__value-list
+                li.product-info-car__value-item SUV
+                li.product-info-car__value-item Летняя
+                li.product-info-car__value-item 275/60 R17 110V
+                li.product-info-car__value-item Комфортные
+                li.product-info-car__value-item Асимметричный, ненаправленный 
+            .product-info-dealer
+              span.product-info-dealer__param Дилер:
+              span.product-info-dealer__name Шин сервис
+              a.product-info-dealer__supply Все предложения
+              .product-info-dealer__options
+                img.product-info-dealer__options-icon
+                span.product-info-dealer__options-text Бесплатно, 1-3 дня
+              .product-info-dealer__options
+                img.product-info-dealer__options-icon
+                span.product-info-dealer__options-text Шиномонтаж бесплатно
+              .product-info-dealer__options
+                img.product-info-dealer__options-icon
+                span.product-info-dealer__options-text Самовывоз
+            .product-info-purchase
+              .product-info-purchase__quantity
+                .product-info-purchase__quantity-text
+                .quantity
+                  img.quantity__minus
+                  .quantity__number 1
+                  img.quantity__plus
+              .product-info-purchase__cost
+                .product-info-purchase__cost-text Цена:
+                .product-info-purchase__cost-amount 12 730 i
+              .product-info-purchase__overall
+                .product-info-purchase__overall-text Сумма
+                .product-info-purchase__overall-amount 50 920 i
+              .product-info-purchase__button
+                .product-info-purchase__button-text Купить
+          .product-options
+            ul.product-options__list
+              li.product-options__item
+                a.product-options__link Типоразмеры
+              li.product-options__item
+                a.product-options__link Дилеры
+              li.product-options__item
+                a.product-options__link Описание
+              li.product-options__item
+                a.product-options__link Отзывы
+          .contacts
+            .contacts-info
+              .contacts-info__filter
+                h2.contacts-info__heading Магазины и центры, где есть:
+                ul.contacts-info__list
+                  li.contacts-info__item
+                    input.contacts-info__checkbox(type="checkbox")
+                    label.contacts-info__label Самовывоз
+                  li.contacts-info__item
+                    input.contacts-info__checkbox(type="checkbox")
+                    label.contacts-info__label Доставка
+                  li.contacts-info__item
+                    input.contacts-info__checkbox(type="checkbox")
+                    label.contacts-info__label Шиномонтаж бесплатно
+              .contacts-info__locations
+                ul.contacts-info__location-list
+                  li.contacts-info__location
+                    h2.contacts-info__location-name Emex - Автозапчасти
+                    p.contacts-info__location-address г.Москва, ул. Генерала Белобородова, вл.40 к.2
+                    span.contacts-info__location-amount 12 503 i
+                    .contacts-info__location-button
+                      .contacts-info__location-button-text Купить
+                  li.contacts-info__location
+                    h2.contacts-info__location-name Шин сервис
+                    p.contacts-info__location-address г.Москва, ул. Генерала Белобородова, вл.40 к.2
+                    span.contacts-info__location-amount 12 503 i
+                    .contacts-info__location-button
+                      .contacts-info__location-button-text Купить
+            .contacts-map
+              ul.contacts-map__legend
+                li.contacts-map__legend-item
+                  img.contacts-map__legend-picture(src="", alt="")
+                  span.contacts-map__legend-text — Официальный дилер
+                li.contacts-map__legend-item
+                  img.contacts-map__legend-picture(src="", alt="")
+                  span.contacts-map__legend-text — Дилер-партнер
+              .yandex-map
+          .recommended
+            h2.recommended__heading Похожие шины
+            ul.recommended__list
+              li.recommended__item
+                img.recommended__img
+                span.recommended__title NT 860
+                .recommended__diameter
+                  .recommended__diameter-icon
+                  .recommended__diameter-text Диаметр шин: Ø15 — Ø20
+                p.recommended__info NT860 - шина для легковых автомобилей, которая обеспечит максимально комфортную и тихую езду, низкий износ и оптимальные сцепные характеристики на всех типах дорожных покрытий.
+                .recommended__button Подробнее
+              li.recommended__item
+                img.recommended__img
+                span.recommended__title NT 830
+                .recommended__diameter
+                  .recommended__diameter-icon
+                  .recommended__diameter-text Диаметр шин: Ø15 — Ø20
+                p.recommended__info Шины NT830 — шины со сверхвысокими ходовыми качествами, разработанные для комфортного вождения на сухой и мокрой дороге, с минимальным шумом и максимальной безопасностью.
+                .recommended__button Подробнее
+              li.recommended__item
+                img.recommended__img
+                span.recommended__title Dura Grappler®
+                .recommended__diameter
+                  .recommended__diameter-icon
+                  .recommended__diameter-text Диаметр шин: Ø15 — Ø20
+                p.recommended__info Шины Dura Grappler — созданы для езды по автомагистрали.
+                .recommended__button Подробнее
+          footer.footer
+            .footer__copyright
+              img.footer__logo
+              .footer__nitto-copyright Nitto Tires © 2017
+              .footer-developer
+                img.footer-developer-logo
+                a.footer-developer-link Разработка сайта: Redsoft
+            .footer__catalog
+              .footer__heading Каталог
+              ul.footer__list
+                li.footer__item
+                  a.footer__link Зимние
+                li.footer__item
+                  a.footer__link Летние
+                li.footer__item
+                  a.footer__link Подбор шин
+                li.footer__item
+                  img.footer__item-img
+                  a.footer__link Найти магазин
+            .footer__info
+              .footer__heading Информация
+              ul.footer__list
+                li.footer__item
+                  a.footer__link Инструкция
+                li.footer__item
+                  a.footer__link О бренде
+                li.footer__item
+                  a.footer__link Новости
+                li.footer__item
+                  a.footer__link Контакты
+                li.footer__item
+                  a.footer__link Политика конфиденциальности
+            .footer__social
+              img.footer__social-img
+              img.footer__social-img
+              img.footer__social-img
+              img.footer__social-img
+
+
+
+          
+

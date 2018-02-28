@@ -35,10 +35,10 @@ const paths = {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
     },
-    // scripts: {
-    // src: 'src/scripts/**/*.js',
-    // dest: 'build/assets/scripts/'
-    // }, 
+    scripts: {
+        src: 'src/scripts/**/*.js',
+        dest: 'build/assets/scripts/'
+    },
     fonts: {
         src: 'src/webfonts/**/*.*',
         dest: 'build/assets/webfonts'
@@ -79,19 +79,18 @@ function clean() {
     return del(paths.root);
 }
 
-// webpack
-/* function scripts() {
-    return gulp.src('src/scripts/app.js')
-        .pipe(gulpWebpack(webpackConfig, webpack))
+// перенос JS
+function scripts() {
+    return gulp.src('src/scripts/*.js')
         .pipe(gulp.dest(paths.scripts.dest));
-} */
+}
 
 // галповский вотчер
 function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.images.src, images);
-    /* gulp.watch(paths.scripts.src, scripts); */
+    gulp.watch(paths.scripts.src, scripts);
 }
 
 // локальный сервер + livereload (встроенный)
@@ -152,6 +151,6 @@ exports.images = images;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, sprite, spritessvg, fonts, /* scripts */ ),
+    gulp.parallel(styles, templates, images, sprite, spritessvg, fonts, scripts),
     gulp.parallel(watch, server)
 ));
