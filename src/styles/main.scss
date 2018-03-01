@@ -1,0 +1,11 @@
+// resolutions
+$netbooks: 1023px;
+$tablets: 767px;
+$phones: 480px;
+//common
+@import "common/media";
+@import "common/variables";
+@import "common/base";
+@import "common/fonts";
+//layout
+@import "pages/index";
