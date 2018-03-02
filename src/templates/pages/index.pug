@@ -5,15 +5,18 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel='stylesheet' href='/assets/styles/main.min.css')
+    script(src='/assets/scripts/fontawesome-all.js')
     title Nitto
   body
     .wrapper
       header.header
         .container.header-container
           .logo
+            svg.logo__img
+              use(xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#logo-head")
           .header-menu
             ul.header-menu__list
-              li.header-menu__item
+              li.header-menu__item.header-menu__item-active
                 a.header-menu__link Зимние шины
               li.header-menu__item
                 a.header-menu__link Летние шины
@@ -21,16 +24,20 @@ html(lang="en")
                 a.header-menu__link Найти магазин
               li.header-menu__item
                 a.header-menu__link О компании
+                .arrow
             .nav-elemets
-              .nav-elemets__pin
-              .nav-elemets__search
+              .nav-elements__item.nav-elements__item-pin
+                i.fas.fa-map-marker-alt
+              .nav-elements__item.nav-elements__item-search
+                i.fas.fa-search         
       .banner
-        .container
-          .breadcrumbs
+        .breadcrumbs
+          .container
             a.breadcrumbs__link Главная
             a.breadcrumbs__link Каталог
             a.breadcrumbs__link Внедорожные летние
             a.breadcrumbs__link NT420S 275/60 R17 110V
+        .container
           .banner-info
             .banner-info__logo
             ul.banner-info__stars
