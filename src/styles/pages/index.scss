@@ -1,3 +1,4 @@
+//wrapper and container
 .wrapper {
     width: 100%;
     height: 100%;
@@ -13,6 +14,7 @@
     width: 98%;
 }
 
+//header
 .header {
     height: rem(80px);
     background-color: white;
@@ -125,7 +127,337 @@
     height: 100%;
 }
 
+//banner
 .banner {
     height: rem(657px);
-    background: url(assets/images/background.png);
+    background: url(../images/background.png) center center no-repeat;
+}
+
+.breadcrumbs {
+    width: 100%;
+    height: rem(41px);
+    background: rgba(#ffffff, 0.5);
+}
+
+.breadcrumbs-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.breadcrumbs__link {
+    align-items: center;
+    display: flex;
+    color: #404041;
+    position: relative;
+    font-family: 'GothamPro', Arial, Helvetica, sans-serif;
+    font-size: rem(14px);
+    &::after {
+        content: '>';
+        font-size: 12px;
+        margin: 0 6px 0 6px;
+    }
+    &:last-child {
+        &::after {
+            content: "";
+            margin: 0;
+        }
+    }
+}
+
+.breadcrumbs__link-active {
+    color: black;
+    font-weight: bold;
+}
+
+.banner-container {
+    flex-direction: row;
+    height: calc(100% - 41px);
+}
+
+.banner-info {
+    margin-top: rem(97px);
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(16px);
+    color: white;
+    max-width: rem(463px);
+    flex-grow: 1;
+}
+
+.banner-info__numbers {
+    display: flex;
+    margin-bottom: rem(20px);
+}
+
+.banner-info__stars {
+    display: flex;
+    align-items: center;
+    margin-right: rem(20px);
+}
+
+.banner-info__star {
+    width: rem(17px);
+    height: rem(16px);
+    margin-right: rem(8px);
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.banner-info__star-img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-info__logo {
+    width: rem(463px);
+    height: rem(33px);
+    margin-bottom: rem(35px);
+}
+
+.banner-info__img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-info__score {
+    margin-right: rem(6px);
+}
+
+.banner-info__heading {
+    margin: 0;
+    font-size: rem(24px);
+    margin-bottom: rem(13px);
+}
+
+.banner-info__text {
+    margin: 0;
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
+    margin-bottom: rem(25px);
+}
+
+.banner-info__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 60px;
+    border-radius: 35.5px;
+    background-color: #eb373b;
+    box-shadow: 0 4px 6px 0 rgba(235, 55, 59, 0.3);
+}
+
+.banner-pic {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding-left: rem(170px);
+    flex-direction: column;
+    margin-top: rem(98px);
+}
+
+.banner-pic__image {
+    width: rem(349px);
+    height: rem(444px);
+}
+
+.banner-pic__turn-icon {
+    width: rem(60px);
+    height: rem(39px);
+}
+
+//product
+.product {
+    display: flex;
+}
+
+.product-header {
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    margin-top: rem(60px);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: rem(33px);
+    border-bottom: 1px solid #d2d2d2;
+    margin-bottom: rem(40px);
+}
+
+.product-header__heading {
+    margin: 0;
+    font-size: rem(36px);
+}
+
+.product-header-filter {
+    display: flex;
+    align-items: flex-end;
+}
+
+.product-header-filter__text {
+    font-size: rem(18px);
+}
+
+.product-header-filter__picture {
+    margin-bottom: 7px;
+    margin-right: 18px;
+    width: rem(24px);
+    height: rem(16px);
+}
+
+.product-header-filter__img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-picture {
+    display: flex;
+    width: rem(659px);
+    height: rem(673px);
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 4px;
+    border: solid 1px #d7d8d7;
+    margin-right: rem(40px);
+}
+
+.product-picture__img {
+    width: rem(319px);
+    height: rem(567px);
+}
+
+.product-info-car {
+    border-bottom: 1px solid #d7d8d7;
+}
+
+.product-info-car__icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(17px);
+}
+
+.product-info-car__icon-img-sun {
+    width: rem(24px);
+    height: rem(24px);
+}
+
+.product-info-car__icon-img-truck {
+    width: rem(34px);
+    height: rem(14px);
+}
+
+.product-info-car__desc {
+    display: flex;
+    margin-bottom: rem(25px);
+    font-size: rem(16px);
+}
+
+.product-info-car__params-list {
+    margin-right: rem(18px);
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    min-width: rem(182px);
+}
+
+.product-info-car__value-list {
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
+}
+
+.product-info-car__params-item {
+    margin-bottom: rem(18px);
+}
+
+.product-info-car__value-item {
+    margin-bottom: rem(18px);
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.product-info-dealer {
+    margin-top: rem(22px);
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
+    margin-bottom: rem(23px);
+}
+
+.product-info-dealer__param {
+    font-size: rem(16px);
+    margin-right: rem(4px);
+}
+
+.product-info-dealer__name {
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(18px);
+}
+
+.product-info-dealer__supply {
+    float: right;
+    font-size: rem(14px);
+    text-decoration: underline;
+    opacity: 0.4;
+}
+
+.product-info-dealer__options {
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
+    font-size: rem(16px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-info-dealer__options-icon-img {
+    height: rem(16px);
+    width: rem(28px);
+}
+
+.product-info-dealer__options-icon {
+    display: flex;
+    align-items: center;
+    margin-right: rem(18px);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(23px);
+}
+
+.row-last {
+    margin-bottom: rem(26px);
+}
+
+.product-info-purchase {
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(18px);
+    width: rem(460px);
+    height: rem(233px);
+    background-color: $grey;
+    border-radius: 4px;
+}
+
+.product-info-purchase__quantity {
+    display: flex;
+    height: rem(72px);
+    align-items: center;
+}
+
+.product-info-purchase__overall {
+    display: flex;
+    align-items: center;
+    height: rem(69px);
+}
+
+.product-info-purchase__cost {
+    display: flex;
+}
+
+.product-info-purchase__cost-amount {}
+
+.quantity {
+    display: flex;
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
+    font-size: rem(14px);
+}
+
+.product-info-purchase__overall {
+    display: flex;
+}
+
+.product-info-purchase__button {
+    height: rem(92px);
 }
