@@ -269,6 +269,7 @@
 //product
 .product {
     display: flex;
+    margin-bottom: rem(35px);
 }
 
 .product-header {
@@ -325,6 +326,10 @@
 
 .product-info-car {
     border-bottom: 1px solid #d7d8d7;
+}
+
+.product-info-car__icon {
+    margin-right: rem(20px);
 }
 
 .product-info-car__icons {
@@ -428,12 +433,15 @@
     height: rem(233px);
     background-color: $grey;
     border-radius: 4px;
+    padding-left: rem(29px);
+    padding-right: rem(22px);
 }
 
 .product-info-purchase__quantity {
     display: flex;
     height: rem(72px);
     align-items: center;
+    border-bottom: solid 1px #d2d2d2;
 }
 
 .product-info-purchase__overall {
@@ -446,18 +454,285 @@
     display: flex;
 }
 
-.product-info-purchase__cost-amount {}
+.product-info-purchase__quantity-text {
+    margin-right: rem(18px);
+}
 
 .quantity {
     display: flex;
     font-family: "GothamPro", Arial, Helvetica, sans-serif;
     font-size: rem(14px);
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: solid 1px #e8e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: rem(35px);
+}
+
+.quantity__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(24px);
+    height: rem(20px);
+    border-right: solid 1px #ebeaea;
+    border-left: solid 1px #ebeaea;
+}
+
+.quantity__minus,
+.quantity__plus {
+    display: flex;
+    align-items: center;
+    width: rem(7px);
+    height: rem(7px);
+}
+
+.quantity__minus {
+    margin-left: rem(11px);
+}
+
+.quantity__plus {
+    margin-right: rem(11px);
+}
+
+.quantity__minus-img,
+.quantity__plus-img {
+    width: 100%;
+    height: 100%;
 }
 
 .product-info-purchase__overall {
     display: flex;
+    justify-content: space-between;
 }
 
 .product-info-purchase__button {
     height: rem(92px);
+    display: flex;
+    justify-content: center;
+}
+
+.product-info-purchase__button-text {
+    width: rem(399px);
+    height: rem(60px);
+    border-radius: 35.5px;
+    background-color: #eb373b;
+    box-shadow: 0 4px 6px 0 rgba(235, 55, 59, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: rem(16px);
+}
+
+.product-info-purchase__cost-text {
+    margin-right: rem(30px);
+}
+
+//product options
+.product-options {
+    margin-bottom: rem(35px);
+}
+
+.product-options__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: rem(46px);
+    border-bottom: solid 1px #d2d2d2;
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(18px);
+    line-height: rem(24px);
+    color: #404041;
+}
+
+.product-options__item {
+    width: rem(290px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-options__item-selected {
+    font-size: rem(24px);
+    color: black;
+}
+
+.product-options__underline {
+    width: 290px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: #eb4248;
+    align-self: flex-end;
+}
+
+.product-options__link {
+    display: flex;
+    justify-content: center;
+}
+
+//contacts
+.contacts {
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts-info {
+    width: rem(380px);
+    border-right: solid 1px #d2d2d2;
+}
+
+.contacts-info__heading {
+    margin: 0;
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    margin-bottom: rem(16px);
+}
+
+.contacts-info__filter {
+    margin-bottom: rem(27px);
+    border-bottom: solid 1px #d2d2d2;
+}
+
+.contacts-info__item {
+    margin-bottom: rem(16px);
+}
+
+input[type=checkbox].css-checkbox {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+input[type=checkbox].css-checkbox+label.css-label {
+    padding-left: 25px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked+label.css-label {
+    background-position: 0 -20px;
+}
+
+label.css-label {
+    background-image: url(../images/csscheckbox.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contacts-info__locations {
+    margin-right: rem(18px);
+}
+
+.contacts-info__location {
+    width: 360px;
+    height: 187px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    padding: 25px 40px 30px 29px;
+    margin-bottom: rem(20px);
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.contacts-info__location-button-text {
+    width: 151px;
+    height: 40px;
+    border-radius: 35.5px;
+    background-color: #eb373b;
+    box-shadow: 0 2px 5px 0 rgba(235, 55, 59, 0.3);
+}
+
+.contacts-info__location-name {
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(18px);
+    margin: 0;
+    margin-bottom: rem(10px);
+}
+
+.contacts-info__location-address {
+    margin: 0;
+    font-size: rem(14px);
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
+    margin-bottom: rem(13px);
+}
+
+.contacts-info__location-amount {
+    font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(18px);
+}
+
+.contact-info__buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-info__location-button-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
+    font-size: rem(14px);
+}
+
+.contacts-map {
+    margin-left: rem(20px);
+}
+
+.contacts-map__legend-picture {
+    margin-right: rem(9px);
+}
+
+.contacts-map__legend-picture-official {
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    border: 5px solid $red;
+}
+
+.contacts-map__legend-picture-partner {
+    width: 10px;
+    height: 10px;
+    background-color: $red;
+    border-radius: 50%;
+}
+
+.contacts-map__legend {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: rem(28px);
+}
+
+.contacts-map__legend-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: rem(24px);
+    font-family: "GothamPro", Arial, Helvetica, sans-serif;
 }

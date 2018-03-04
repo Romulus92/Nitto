@@ -127,16 +127,20 @@ html(lang="en")
                   span.product-info-dealer__options-text Самовывоз
               .product-info-purchase
                 .product-info-purchase__quantity
-                  .product-info-purchase__quantity-text Количество
+                  .product-info-purchase__quantity-text Количество:
                   .quantity
-                    img.quantity__minus
+                    .quantity__minus
+                      svg.quantity__minus-img
+                        use(xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#minus")
                     .quantity__number 1
-                    img.quantity__plus
+                    .quantity__plus
+                      svg.quantity__plus-img
+                        use(xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#plus")
                   .product-info-purchase__cost
                     .product-info-purchase__cost-text Цена:
                     .product-info-purchase__cost-amount 12 730 ₽
                 .product-info-purchase__overall
-                  .product-info-purchase__overall-text Сумма
+                  .product-info-purchase__overall-text Сумма:
                   .product-info-purchase__overall-amount 50 920 ₽
                 .product-info-purchase__button
                   .product-info-purchase__button-text Купить
@@ -144,8 +148,9 @@ html(lang="en")
             ul.product-options__list
               li.product-options__item
                 a.product-options__link Типоразмеры
-              li.product-options__item
+              li.product-options__item.product-options__item-selected
                 a.product-options__link Дилеры
+                .product-options__underline
               li.product-options__item
                 a.product-options__link Описание
               li.product-options__item
@@ -156,37 +161,39 @@ html(lang="en")
                 h2.contacts-info__heading Магазины и центры, где есть:
                 ul.contacts-info__list
                   li.contacts-info__item
-                    input.contacts-info__checkbox(type="checkbox")
-                    label.contacts-info__label Самовывоз
+                    input.contacts-info__checkbox.css-checkbox(type="checkbox" id='check1')
+                    label.contacts-info__label.css-label(for='check1') Самовывоз
                   li.contacts-info__item
-                    input.contacts-info__checkbox(type="checkbox")
-                    label.contacts-info__label Доставка
+                    input.contacts-info__checkbox.css-checkbox(type="checkbox" id='check2')
+                    label.contacts-info__label.css-label(for='check2') Доставка
                   li.contacts-info__item
-                    input.contacts-info__checkbox(type="checkbox")
-                    label.contacts-info__label Шиномонтаж бесплатно
+                    input.contacts-info__checkbox.css-checkbox(type="checkbox" id='check3')
+                    label.contacts-info__label.css-label(for='check3') Шиномонтаж бесплатно
               .contacts-info__locations
                 ul.contacts-info__location-list
                   li.contacts-info__location
                     h2.contacts-info__location-name Emex - Автозапчасти
                     p.contacts-info__location-address г.Москва, ул. Генерала Белобородова, вл.40 к.2
-                    span.contacts-info__location-amount 12 503 i
-                    .contacts-info__location-button
-                      .contacts-info__location-button-text Купить
+                    .contact-info__buy
+                      span.contacts-info__location-amount 12 503 ₽
+                      .contacts-info__location-button
+                        span.contacts-info__location-button-text Купить
                   li.contacts-info__location
                     h2.contacts-info__location-name Шин сервис
                     p.contacts-info__location-address г.Москва, ул. Генерала Белобородова, вл.40 к.2
-                    span.contacts-info__location-amount 12 503 i
-                    .contacts-info__location-button
-                      .contacts-info__location-button-text Купить
+                    .contact-info__buy
+                      span.contacts-info__location-amount 12 503 ₽
+                      .contacts-info__location-button
+                        span.contacts-info__location-button-text Купить
             .contacts-map
               ul.contacts-map__legend
                 li.contacts-map__legend-item
-                  img.contacts-map__legend-picture(src="", alt="")
+                  .contacts-map__legend-picture.contacts-map__legend-picture-official
                   span.contacts-map__legend-text — Официальный дилер
                 li.contacts-map__legend-item
-                  img.contacts-map__legend-picture(src="", alt="")
+                  .contacts-map__legend-picture.contacts-map__legend-picture-partner
                   span.contacts-map__legend-text — Дилер-партнер
-              .yandex-map
+              img.yandex-map(src="assets/images/map.png")
           .recommended
             h2.recommended__heading Похожие шины
             ul.recommended__list

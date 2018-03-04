@@ -160,9 +160,19 @@
               </div>
               <div class="product-info-purchase">
                 <div class="product-info-purchase__quantity">
-                  <div class="product-info-purchase__quantity-text">Количество</div>
-                  <div class="quantity"><img class="quantity__minus"/>
-                    <div class="quantity__number">1</div><img class="quantity__plus"/>
+                  <div class="product-info-purchase__quantity-text">Количество:</div>
+                  <div class="quantity">
+                    <div class="quantity__minus">
+                      <svg class="quantity__minus-img">
+                        <use xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#minus"></use>
+                      </svg>
+                    </div>
+                    <div class="quantity__number">1</div>
+                    <div class="quantity__plus">
+                      <svg class="quantity__plus-img">
+                        <use xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#plus"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="product-info-purchase__cost">
                     <div class="product-info-purchase__cost-text">Цена:</div>
@@ -170,7 +180,7 @@
                   </div>
                 </div>
                 <div class="product-info-purchase__overall">
-                  <div class="product-info-purchase__overall-text">Сумма</div>
+                  <div class="product-info-purchase__overall-text">Сумма:</div>
                   <div class="product-info-purchase__overall-amount">50 920 ₽</div>
                 </div>
                 <div class="product-info-purchase__button">
@@ -182,7 +192,9 @@
           <div class="product-options">
             <ul class="product-options__list">
               <li class="product-options__item"><a class="product-options__link">Типоразмеры</a></li>
-              <li class="product-options__item"><a class="product-options__link">Дилеры</a></li>
+              <li class="product-options__item product-options__item-selected"><a class="product-options__link">Дилеры</a>
+                <div class="product-options__underline"></div>
+              </li>
               <li class="product-options__item"><a class="product-options__link">Описание</a></li>
               <li class="product-options__item"><a class="product-options__link">Отзывы</a></li>
             </ul>
@@ -193,16 +205,16 @@
                 <h2 class="contacts-info__heading">Магазины и центры, где есть:</h2>
                 <ul class="contacts-info__list">
                   <li class="contacts-info__item">
-                    <input class="contacts-info__checkbox" type="checkbox"/>
-                    <label class="contacts-info__label">Самовывоз</label>
+                    <input class="contacts-info__checkbox css-checkbox" type="checkbox" id="check1"/>
+                    <label class="contacts-info__label css-label" for="check1">Самовывоз</label>
                   </li>
                   <li class="contacts-info__item">
-                    <input class="contacts-info__checkbox" type="checkbox"/>
-                    <label class="contacts-info__label">Доставка</label>
+                    <input class="contacts-info__checkbox css-checkbox" type="checkbox" id="check2"/>
+                    <label class="contacts-info__label css-label" for="check2">Доставка</label>
                   </li>
                   <li class="contacts-info__item">
-                    <input class="contacts-info__checkbox" type="checkbox"/>
-                    <label class="contacts-info__label">Шиномонтаж бесплатно</label>
+                    <input class="contacts-info__checkbox css-checkbox" type="checkbox" id="check3"/>
+                    <label class="contacts-info__label css-label" for="check3">Шиномонтаж бесплатно</label>
                   </li>
                 </ul>
               </div>
@@ -210,16 +222,16 @@
                 <ul class="contacts-info__location-list">
                   <li class="contacts-info__location">
                     <h2 class="contacts-info__location-name">Emex - Автозапчасти</h2>
-                    <p class="contacts-info__location-address">г.Москва, ул. Генерала Белобородова, вл.40 к.2</p><span class="contacts-info__location-amount">12 503 i</span>
-                    <div class="contacts-info__location-button">
-                      <div class="contacts-info__location-button-text">Купить</div>
+                    <p class="contacts-info__location-address">г.Москва, ул. Генерала Белобородова, вл.40 к.2</p>
+                    <div class="contact-info__buy"><span class="contacts-info__location-amount">12 503 ₽</span>
+                      <div class="contacts-info__location-button"><span class="contacts-info__location-button-text">Купить</span></div>
                     </div>
                   </li>
                   <li class="contacts-info__location">
                     <h2 class="contacts-info__location-name">Шин сервис</h2>
-                    <p class="contacts-info__location-address">г.Москва, ул. Генерала Белобородова, вл.40 к.2</p><span class="contacts-info__location-amount">12 503 i</span>
-                    <div class="contacts-info__location-button">
-                      <div class="contacts-info__location-button-text">Купить</div>
+                    <p class="contacts-info__location-address">г.Москва, ул. Генерала Белобородова, вл.40 к.2</p>
+                    <div class="contact-info__buy"><span class="contacts-info__location-amount">12 503 ₽</span>
+                      <div class="contacts-info__location-button"><span class="contacts-info__location-button-text">Купить</span></div>
                     </div>
                   </li>
                 </ul>
@@ -227,10 +239,13 @@
             </div>
             <div class="contacts-map">
               <ul class="contacts-map__legend">
-                <li class="contacts-map__legend-item"><img class="contacts-map__legend-picture" src="" alt=""/><span class="contacts-map__legend-text">— Официальный дилер</span></li>
-                <li class="contacts-map__legend-item"><img class="contacts-map__legend-picture" src="" alt=""/><span class="contacts-map__legend-text">— Дилер-партнер</span></li>
-              </ul>
-              <div class="yandex-map"></div>
+                <li class="contacts-map__legend-item">
+                  <div class="contacts-map__legend-picture contacts-map__legend-picture-official"></div><span class="contacts-map__legend-text">— Официальный дилер</span>
+                </li>
+                <li class="contacts-map__legend-item">
+                  <div class="contacts-map__legend-picture contacts-map__legend-picture-partner"></div><span class="contacts-map__legend-text">— Дилер-партнер</span>
+                </li>
+              </ul><img class="yandex-map" src="assets/images/map.png"/>
             </div>
           </div>
           <div class="recommended">
