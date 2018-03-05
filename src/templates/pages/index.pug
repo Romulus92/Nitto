@@ -23,8 +23,9 @@ html(lang="en")
               li.header-menu__item
                 a.header-menu__link Найти магазин
               li.header-menu__item
-                a.header-menu__link О компании
-                .arrow
+                a.header-menu__link
+                  span.header-menu__link-text О компании
+                  .arrow                  
             .nav-elemets
               .nav-elements__item.nav-elements__item-pin
                 i.fas.fa-map-marker-alt
@@ -129,13 +130,9 @@ html(lang="en")
                 .product-info-purchase__quantity
                   .product-info-purchase__quantity-text Количество:
                   .quantity
-                    .quantity__minus
-                      svg.quantity__minus-img
-                        use(xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#minus")
-                    .quantity__number 1
-                    .quantity__plus
-                      svg.quantity__plus-img
-                        use(xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#plus")
+                    input.quantity__minus(type='button' value='-' class='qtyminus' field='quantity')
+                    input.quantity__number(type='text' name='quantity' value='0' class='qty')
+                    input.quantity__plus(type='button' value='+' class='qtyplus' field='quantity')
                   .product-info-purchase__cost
                     .product-info-purchase__cost-text Цена:
                     .product-info-purchase__cost-amount 12 730 ₽
@@ -198,36 +195,46 @@ html(lang="en")
             h2.recommended__heading Похожие шины
             ul.recommended__list
               li.recommended__item
-                img.recommended__img
-                span.recommended__title NT 860
-                .recommended__diameter
-                  .recommended__diameter-icon
-                  .recommended__diameter-text Диаметр шин: Ø15 — Ø20
+                .recommended__tech-info
+                  .recommended__picture
+                    img.recommended__img(src="assets/images/nt860.png")
+                  span.recommended__title NT 860
+                  .recommended__diameter
+                    .recommended__diameter-icon
+                    span.recommended__diameter-text Диаметр шин: Ø15 — Ø20
                 p.recommended__info NT860 - шина для легковых автомобилей, которая обеспечит максимально комфортную и тихую езду, низкий износ и оптимальные сцепные характеристики на всех типах дорожных покрытий.
-                .recommended__button Подробнее
+                a.recommended__button Подробнее
               li.recommended__item
-                img.recommended__img
-                span.recommended__title NT 830
-                .recommended__diameter
-                  .recommended__diameter-icon
-                  .recommended__diameter-text Диаметр шин: Ø15 — Ø20
+                .recommended__tech-info
+                  .recommended__picture
+                    img.recommended__img(src="assets/images/nt830.png")
+                  span.recommended__title NT 830
+                  .recommended__diameter
+                    .recommended__diameter-icon
+                    span.recommended__diameter-text Диаметр шин: Ø15 — Ø20
                 p.recommended__info Шины NT830 — шины со сверхвысокими ходовыми качествами, разработанные для комфортного вождения на сухой и мокрой дороге, с минимальным шумом и максимальной безопасностью.
-                .recommended__button Подробнее
+                a.recommended__button Подробнее
               li.recommended__item
-                img.recommended__img
-                span.recommended__title Dura Grappler®
-                .recommended__diameter
-                  .recommended__diameter-icon
-                  .recommended__diameter-text Диаметр шин: Ø15 — Ø20
+                .recommended__tech-info
+                  .recommended__picture
+                    img.recommended__img(src="assets/images/dura.png")
+                  span.recommended__title Dura Grappler®
+                  .recommended__diameter
+                    .recommended__diameter-icon
+                    span.recommended__diameter-text Диаметр шин: Ø15 — Ø20
                 p.recommended__info Шины Dura Grappler — созданы для езды по автомагистрали.
-                .recommended__button Подробнее
+                a.recommended__button Подробнее
       footer.footer
-        .container
+        .container.footer-container
           .footer__copyright
-            img.footer__logo
+            .footer__logo
+              svg.footer__logo-img
+                use(xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#logo-footer")
             .footer__nitto-copyright Nitto Tires © 2017
             .footer-developer
-              img.footer-developer-logo
+              .footer-developer-logo
+                svg.footer__developer-img
+                  use(xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#redsoft")
               a.footer-developer-link Разработка сайта: Redsoft
           .footer__catalog
             .footer__heading Каталог
@@ -255,10 +262,18 @@ html(lang="en")
               li.footer__item
                 a.footer__link Политика конфиденциальности
           .footer__social
-            img.footer__social-img
-            img.footer__social-img
-            img.footer__social-img
-            img.footer__social-img
+            .footer__heading Мы в соцсетях
+            a.footer__social-link
+              i.fab.fa-vk.footer__social-img
+            a.footer__social-link
+              i.fab.fa-instagram.footer__social-img
+            a.footer__social-link
+              i.fab.fa-youtube.footer__social-img
+            a.footer__social-link
+              i.fab.fa-facebook-f.footer__social-img
+  script(src='assets/scripts/jquery-3.3.1.min.js')
+  script(src='assets/scripts/jquery.fancybox.min.js')
+  script(src='assets/scripts/main.js')
 
 
 

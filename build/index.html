@@ -22,9 +22,8 @@
               <li class="header-menu__item header-menu__item-active"><a class="header-menu__link">Зимние шины</a></li>
               <li class="header-menu__item"><a class="header-menu__link">Летние шины</a></li>
               <li class="header-menu__item"><a class="header-menu__link">Найти магазин</a></li>
-              <li class="header-menu__item"><a class="header-menu__link">О компании</a>
-                <div class="arrow"></div>
-              </li>
+              <li class="header-menu__item"><a class="header-menu__link"><span class="header-menu__link-text">О компании</span>
+                  <div class="arrow">                 </div></a></li>
             </ul>
             <div class="nav-elemets">
               <div class="nav-elements__item nav-elements__item-pin"><i class="fas fa-map-marker-alt"></i></div>
@@ -162,17 +161,9 @@
                 <div class="product-info-purchase__quantity">
                   <div class="product-info-purchase__quantity-text">Количество:</div>
                   <div class="quantity">
-                    <div class="quantity__minus">
-                      <svg class="quantity__minus-img">
-                        <use xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#minus"></use>
-                      </svg>
-                    </div>
-                    <div class="quantity__number">1</div>
-                    <div class="quantity__plus">
-                      <svg class="quantity__plus-img">
-                        <use xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#plus"></use>
-                      </svg>
-                    </div>
+                    <input class="quantity__minus qtyminus" type="button" value="-" field="quantity"/>
+                    <input class="quantity__number qty" type="text" name="quantity" value="0"/>
+                    <input class="quantity__plus qtyplus" type="button" value="+" field="quantity"/>
                   </div>
                   <div class="product-info-purchase__cost">
                     <div class="product-info-purchase__cost-text">Цена:</div>
@@ -251,39 +242,53 @@
           <div class="recommended">
             <h2 class="recommended__heading">Похожие шины</h2>
             <ul class="recommended__list">
-              <li class="recommended__item"><img class="recommended__img"/><span class="recommended__title">NT 860</span>
-                <div class="recommended__diameter">
-                  <div class="recommended__diameter-icon"></div>
-                  <div class="recommended__diameter-text">Диаметр шин: Ø15 — Ø20</div>
+              <li class="recommended__item">
+                <div class="recommended__tech-info">
+                  <div class="recommended__picture"><img class="recommended__img" src="assets/images/nt860.png"/></div><span class="recommended__title">NT 860</span>
+                  <div class="recommended__diameter">
+                    <div class="recommended__diameter-icon"></div><span class="recommended__diameter-text">Диаметр шин: Ø15 — Ø20</span>
+                  </div>
                 </div>
-                <p class="recommended__info">NT860 - шина для легковых автомобилей, которая обеспечит максимально комфортную и тихую езду, низкий износ и оптимальные сцепные характеристики на всех типах дорожных покрытий.</p>
-                <div class="recommended__button">Подробнее</div>
+                <p class="recommended__info">NT860 - шина для легковых автомобилей, которая обеспечит максимально комфортную и тихую езду, низкий износ и оптимальные сцепные характеристики на всех типах дорожных покрытий.</p><a class="recommended__button">Подробнее</a>
               </li>
-              <li class="recommended__item"><img class="recommended__img"/><span class="recommended__title">NT 830</span>
-                <div class="recommended__diameter">
-                  <div class="recommended__diameter-icon"></div>
-                  <div class="recommended__diameter-text">Диаметр шин: Ø15 — Ø20</div>
+              <li class="recommended__item">
+                <div class="recommended__tech-info">
+                  <div class="recommended__picture"><img class="recommended__img" src="assets/images/nt830.png"/></div><span class="recommended__title">NT 830</span>
+                  <div class="recommended__diameter">
+                    <div class="recommended__diameter-icon"></div><span class="recommended__diameter-text">Диаметр шин: Ø15 — Ø20</span>
+                  </div>
                 </div>
-                <p class="recommended__info">Шины NT830 — шины со сверхвысокими ходовыми качествами, разработанные для комфортного вождения на сухой и мокрой дороге, с минимальным шумом и максимальной безопасностью.</p>
-                <div class="recommended__button">Подробнее</div>
+                <p class="recommended__info">Шины NT830 — шины со сверхвысокими ходовыми качествами, разработанные для комфортного вождения на сухой и мокрой дороге, с минимальным шумом и максимальной безопасностью.</p><a class="recommended__button">Подробнее</a>
               </li>
-              <li class="recommended__item"><img class="recommended__img"/><span class="recommended__title">Dura Grappler®</span>
-                <div class="recommended__diameter">
-                  <div class="recommended__diameter-icon"></div>
-                  <div class="recommended__diameter-text">Диаметр шин: Ø15 — Ø20</div>
+              <li class="recommended__item">
+                <div class="recommended__tech-info">
+                  <div class="recommended__picture"><img class="recommended__img" src="assets/images/dura.png"/></div><span class="recommended__title">Dura Grappler®</span>
+                  <div class="recommended__diameter">
+                    <div class="recommended__diameter-icon"></div><span class="recommended__diameter-text">Диаметр шин: Ø15 — Ø20</span>
+                  </div>
                 </div>
-                <p class="recommended__info">Шины Dura Grappler — созданы для езды по автомагистрали.</p>
-                <div class="recommended__button">Подробнее</div>
+                <p class="recommended__info">Шины Dura Grappler — созданы для езды по автомагистрали.</p><a class="recommended__button">Подробнее</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <footer class="footer">
-        <div class="container">
-          <div class="footer__copyright"><img class="footer__logo"/>
+        <div class="container footer-container">
+          <div class="footer__copyright">
+            <div class="footer__logo">
+              <svg class="footer__logo-img">
+                <use xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#logo-footer"></use>
+              </svg>
+            </div>
             <div class="footer__nitto-copyright">Nitto Tires © 2017</div>
-            <div class="footer-developer"><img class="footer-developer-logo"/><a class="footer-developer-link">Разработка сайта: Redsoft</a></div>
+            <div class="footer-developer">
+              <div class="footer-developer-logo">
+                <svg class="footer__developer-img">
+                  <use xlink:href="assets/svg/symbol/svg/sprite.symbol.svg#redsoft"></use>
+                </svg>
+              </div><a class="footer-developer-link">Разработка сайта: Redsoft</a>
+            </div>
           </div>
           <div class="footer__catalog">
             <div class="footer__heading">Каталог</div>
@@ -304,9 +309,14 @@
               <li class="footer__item"><a class="footer__link">Политика конфиденциальности</a></li>
             </ul>
           </div>
-          <div class="footer__social"><img class="footer__social-img"/><img class="footer__social-img"/><img class="footer__social-img"/><img class="footer__social-img"/></div>
+          <div class="footer__social">
+            <div class="footer__heading">Мы в соцсетях</div><a class="footer__social-link"><i class="fab fa-vk footer__social-img"></i></a><a class="footer__social-link"><i class="fab fa-instagram footer__social-img"></i></a><a class="footer__social-link"><i class="fab fa-youtube footer__social-img"></i></a><a class="footer__social-link"><i class="fab fa-facebook-f footer__social-img"></i></a>
+          </div>
         </div>
       </footer>
     </div>
   </body>
+  <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+  <script src="assets/scripts/jquery.fancybox.min.js"></script>
+  <script src="assets/scripts/main.js"></script>
 </html>
