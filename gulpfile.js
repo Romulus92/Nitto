@@ -22,34 +22,34 @@ const spritesmith = require('gulp.spritesmith');
 const svgSprite = require('gulp-svg-sprite');
 
 const paths = {
-    root: './build',
+    root: './docs',
     templates: {
         pages: 'src/templates/pages/*.pug',
         src: 'src/templates/**/*.pug'
     },
     styles: {
         src: 'src/styles/**/*.scss',
-        dest: 'build/assets/styles/'
+        dest: 'docs/assets/styles/'
     },
     images: {
         src: 'src/images/**/*.*',
-        dest: 'build/assets/images/'
+        dest: 'docs/assets/images/'
     },
     scripts: {
         src: 'src/scripts/**/*.js',
-        dest: 'build/assets/scripts/'
+        dest: 'docs/assets/scripts/'
     },
     fonts: {
         src: 'src/webfonts/**/*.*',
-        dest: 'build/assets/webfonts'
+        dest: 'docs/assets/webfonts'
     },
     sprite: {
         src: 'src/sprites/**/*.png',
-        dest: 'build/assets/sprites'
+        dest: 'docs/assets/sprites'
     },
     svgsprite: {
         src: 'src/svg/*.svg',
-        dest: 'build/assets/svg'
+        dest: 'docs/assets/svg'
     }
 }
 
