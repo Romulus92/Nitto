@@ -1113,3 +1113,9 @@ label.css-label {
     font-family: "GothamPro-Medium", Arial, Helvetica, sans-serif;
     font-size: rem(14px);
 }
+
+.button {
+    &:hover {
+        background-color: red;
+    }
+}
