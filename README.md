@@ -1,1 +1,1 @@
-Ссылка на сайт - https://romulus92.github.io/Nitto/
+Ссылка на GitHubPages - https://romulus92.github.io/Nitto/
